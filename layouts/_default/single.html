@@ -31,8 +31,14 @@
     {{ end }}
 
     {{ partial "article/components/related-content" . }}
-     
-    {{ if not (eq .Params.comments false) }}
+<script src="https://utteranc.es/client.js"
+        repo="Pilrymage/comment"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>    
+{{ if not (eq .Params.comments false) }}
         {{ partial "comments/include" . }}
     {{ end }}
 
